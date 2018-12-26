@@ -82,7 +82,8 @@ app.post('/new', async (req, res) => {
             }
 
             await storage.save(record);
-            res.redirect(302, `/${record.id}`);
+            res.redirect(302, `/?created=${record.id}`);
+            // res.redirect(302, `/${record.id}`);
             console.log(`Created note ${record.id} as ${record.type}`);
         } else {
             res.status(401);

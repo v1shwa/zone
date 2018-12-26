@@ -30,15 +30,17 @@
       <h1><a href="/" tabindex="0">Zone</a></h1>
       <!-- <p><a href="https://linus.zone/source" title="linus.zone on GitHub">What's this?</a></p> -->
     </header>
-
+    <div class="alert" id="createdMessage" style="display:none">
+      </div> 
     <form action="/new" method="post">
+    
       <div class="header">
         <div class="inputGroup">
-          <label for="id">ID</label>
+          <label for="id">Short ID</label>
           <input type="text" name="id" id="id" tabindex="1" autocomplete="off" autofocus/>
         </div>
         <div class="inputGroup submit">
-            <label class="hidden">Add Record</label>
+            <label class="hidden">Create Record</label>
             <input type="submit" value="Add Record" tabindex="2"/>
         </div>
       </div>
@@ -66,5 +68,7 @@
     </form>
   </main>
   <script src="/static/js/main.js"></script>
+  <script src="/static/js/index.js"></script>
+  <script>checkIfCreatedMessage();</script>
 </body>
 </html>
